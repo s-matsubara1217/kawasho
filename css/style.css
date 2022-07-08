@@ -3660,7 +3660,7 @@ body .job_count_pager.contents_top .pagination ul .number.current {
 }
 @media screen and (max-width: 834px) {
   .lower-whatsnew .kyujin_container {
-    margin-top: 40px;
+    margin-top: 24px;
     margin-bottom: 48px;
   }
 }
