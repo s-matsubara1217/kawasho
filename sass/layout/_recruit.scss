@@ -5,14 +5,6 @@
 // RECRUIT
 // ==========================================*/
 
-//ページヘッダー設定
-.lower-kyujin_l,
-.lower-whatsnew{
-	.pageHeader{
-		background-image: url(../img/kyujin/pageheader.jpg);
-	}
-}
-
 //求人系ページの文字サイズ
 .kyujin_container{
 	font-size: 1.5rem;
@@ -221,9 +213,9 @@
 	}
 	//固定ヘッダー分下に
 	.kyujin_container{
-		margin-top: 150px;
+		margin-top: 40px;
 		@include mixins.mq(sp) {
-			margin-top: 88px;
+			margin-top: 16px;
 		}
 	}
 	//メイン写真を横幅一杯に

@@ -10,14 +10,58 @@
 	pageHeader
 --------------------*/
 .pageHeader{
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	width: 100%;
-	height: 300px;
-	background-color: #eee;
+	margin-left: 80px;
 	@include mixins.mq(sp) {
-		height: 180px;
+		margin-left: 20px;
+	}
+	&__img {
+		background-color: #ccc;
+		background-size: cover;
+		background-repeat: no-repeat;
+		width: 100%;
+		height: 320px;
+		@include mixins.mq(sp) {
+			height: 200px;
+			background-position: center center;
+		}
+	}
+	&__ttl {
+		display: inline-flex;
+		background-color: #fff;
+		flex-direction: column;
+		padding: 36px 64px 36px 40px;
+		margin-top: -64px;
+		border-radius: 0 10px 0 0;
+		@include mixins.mq(sp) {
+			padding: 24px 32px 16px 20px;
+			margin-top: -32px;
+		}
+
+		.eng {
+			font-size: 6rem;
+			font-weight: 900;
+			line-height: 1;
+			@include mixins.mq(sp) {
+				font-size: 4rem;
+			}
+		}
+		.ja {
+			font-size: 1.6rem;
+			line-height: 1.8;
+			font-weight: bold;
+			margin-top: 8px;
+			@include mixins.mq(sp) {
+				font-size: 1.5rem;
+			}
+		}
+	}
+}
+.lower-kyujin_l,
+.lower-whatsnew {
+	.pageHeader {
+		&__img {
+			background-image: url(../img/kyujin/pageheader.jpg);
+		}
 	}
 }
 
@@ -25,20 +69,31 @@
 	breadcrumb
 --------------------*/
 .breadcrumb {
+	padding: 0 6.8%;
+	margin-top: -80px;
+	width: 60%;
+	max-width: 900px;
+	margin-right: 0;
+	margin-left: auto;
+	text-align: right;
+	@include mixins.mq(sp) {
+		margin-top: 0;
+		width: 100%;
+		text-align: left;
+	}
+
 	&__list{
 		position: relative;
     z-index: 1;
     overflow-x: auto;
     white-space: nowrap;
 		padding: 12px 20px;
-		// background: #eef0f2;
-		border-top: 1px solid #dedede;
 		@include mixins.mq(sp) {
 			padding: 10px;
 		}
 		&__item{
 			display: inline;
-			font-size: 1.1rem;
+			font-size: 1.2rem;
 			font-weight: bold;
 			color: mixins.$txt-color;
 			margin: 0 2px;
@@ -57,6 +112,14 @@
 					opacity: 0.7;
 				}
 			}
+		}
+	}
+
+	&.-nonePageheader {
+		margin-top: 60px;
+		@include mixins.mq(sp) {
+			margin-top: 84px;
+			padding: 0 3.2%;
 		}
 	}
 }
