@@ -1,0 +1,344 @@
+@charset "utf-8";
+
+@use '../foundation/mixins';
+
+/*------------------------------
+form base setting
+------------------------------*/
+body.iPhone select,
+body.iPhone input,
+body.iPhone textarea {
+	font-size: 16px !important;
+}
+
+body{
+
+	input,
+	button,
+	textarea,
+	select {
+		-moz-appearance: none;
+		-ms-appearance: none;
+		-webkit-appearance: none;
+		appearance: none;
+		text-indent: 0.01px;
+		line-height: inherit;
+		text-overflow: '';
+	}
+
+	input::-ms-expand,
+	button::-ms-expand,
+	textarea::-ms-expand,
+	select::-ms-expand {
+		display: none;
+	}
+
+	input::-ms-reveal,
+	button::-ms-reveal,
+	textarea::-ms-reveal,
+	select::-ms-reveal {
+		visibility: hidden;
+	}
+
+	input::-ms-clear,
+	button::-ms-clear,
+	textarea::-ms-clear,
+	select::-ms-clear {
+		visibility: hidden;
+	}
+
+	input[type="text"],
+	input[type="submit"],
+	input[type="search"],
+	input[type="button"],
+	select,
+	textarea {
+		-moz-transition: all 0.2s;
+		-ms-transition: all 0.2s;
+		-webkit-transition: all 0.2s;
+		border: none;
+		outline: none;
+		transition: all 0.2s;
+	}
+
+	input[type="search"] {
+		cursor: auto;
+		-moz-box-sizing: border-box;
+		-ms-box-sizing: border-box;
+		-webkit-appearance: textfield;
+		-webkit-appearance: none;
+		-webkit-box-sizing: border-box;
+		box-sizing: border-box;
+	}
+
+	input[type="search"]:focus {
+		outline-offset: -2px;
+	}
+
+	input[type="search"]::-webkit-search-decoration {
+		display: none;
+	}
+
+	select,
+	search,
+	input {
+		width: 100%;
+		display: block;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+		cursor: pointer;
+		background: transparent;
+	}
+
+	select,
+	input[type="text"],
+	input[type="search"]{
+		@include mixins.mq(sp) {
+			font-size: 1.6rem;
+		}
+	}
+
+}
+
+
+/*------------------------------
+	form custom setting
+------------------------------*/
+.custom-form{
+	font-size: 1.6rem;
+	font-weight: bold;
+	@include mixins.mq(sp){
+		font-size: 1.4rem;
+	}
+	.search_item{
+		margin-bottom: 5px;
+		&.-area{
+			.parts_ttl{
+				&::before{
+					background-image: url(../img/common/ico_marker.png);
+				}
+			}
+		}
+		&.-job{
+			.parts_ttl{
+				&::before{
+					background-image: url(../img/common/ico_bag.png);
+				}
+			}
+		}
+		&.-type{
+			.parts_ttl{
+				&::before{
+					background-image: url(../img/common/ico_file.png);
+				}
+			}
+		}
+		&.-keyword{
+			display: flex;
+			align-items: flex-end;
+			border-bottom: none;
+			margin-bottom: 0;
+			@include mixins.mq(sp) {
+				display: block;
+			}
+			.custom-form_parts{
+				flex: 1 1 auto;
+			}
+			.parts_ttl{
+				&::before{
+					background-image: url(../img/common/ico_word.png);
+				}
+			}
+			.custom-form_searth_btn{
+				flex: 0 0 160px;
+				max-width: 160px;
+				margin-left: 10px;
+				@include mixins.mq(sp) {
+					max-width: 80%;
+					margin: 16px auto 0;
+				}
+			}
+		}
+	}
+	.custom-form_parts{
+
+	}
+	.parts_ttl{
+		display: flex;
+		align-items: center;
+		font-weight: bold;
+		@include mixins.mq(sp){
+			font-size: 1.5rem;
+		}
+		&::before{
+			content: '';
+			flex: 0 0 16px;
+			width: 16px;
+			height: 18px;
+			margin-right: 8px;
+			background-position: center center;
+			background-size: contain;
+			background-repeat: no-repeat;
+		}
+	}
+	.pull-down{
+		position: relative;
+		padding: 4px 0;
+		&::after{
+			content: '';
+			position: absolute;
+			top: calc(50% - 5px);
+			right: 20px;
+			width: 7px;
+			height: 7px;
+			border-right: 1px solid;
+			border-bottom: 1px solid;
+			transform: rotate(45deg) translate(0,-50%);
+		}
+		select{
+			padding: 12px 48px 12px 20px;
+			background: #ffffff;
+			border-radius: 5px;
+			transition: background 0.24s;
+			@include mixins.mq(pc) {
+				&:hover{
+					background: darken(#ffffff,1%);
+				}
+			}
+		}
+	}
+	.category_list{
+		display: flex;
+		flex-wrap: wrap;
+		padding: 4px 0;
+		@include mixins.mq(sp){
+			justify-content: space-between;
+		}
+		li{
+			margin: 4px 8px 4px 0;
+			@include mixins.mq(sp){
+				flex: 1 1 auto;
+				flex: 0 0 49%;
+				margin: 1% 0;
+			}
+		}
+		input[type=checkbox] {
+			display: none;
+		}
+		input[type=checkbox] + label {
+			position: relative;
+			display: block;
+			line-height: 1.75;
+			padding: 11px 24px 11px 42px;
+			background: #ffffff;
+			border-radius: 5px;
+			transition: all 0.2s;
+			cursor: pointer;
+			transition: background 0.24s;
+			@include mixins.mq(pc) {
+				&:hover{
+					background: darken(#ffffff,1%);
+				}
+			}
+			@include mixins.mq(sp) {
+				padding: 10px 16px 10px 34px;
+			}
+			&::before{
+				content: '';
+				position: absolute;
+				left: 16px;
+				top: 16px;
+				width: 18px;
+				height: 18px;
+				background: #ffffff;
+				border: 1px solid #a8a8a8;
+				border-radius: 2px;
+				box-sizing: border-box;
+				@include mixins.mq(sp) {
+					left: 12px;
+					top: 14px;
+					width: 16px;
+					height: 16px;
+				}
+			}
+			&::after{
+				content: '';
+				opacity: 0;
+				position: absolute;
+				top: calc(16px + 3px);
+				left: calc(16px + 6px);
+				z-index: 2;
+				width: 4px;
+				height: 8px;
+				color: mixins.$primary-color;
+				border-bottom: 2px solid;
+				border-right: 2px solid;
+				transform: rotate(-180deg);
+				transition: all .2s;
+				box-sizing: content-box;
+				@include mixins.mq(sp) {
+					top: calc(14px + 2px);
+					left: calc(12px + 5px);
+				}
+			}
+		}
+		input[type=checkbox]:checked + label {
+			color: #ffffff;
+			background: mixins.$primary-color;
+			border-color: mixins.$primary-color;
+			&::before{
+				border-color: transparent;
+			}
+			&::after{
+				opacity: 1;
+				transform: rotate(40deg);
+			}
+		}
+	}
+	.search_word{
+		padding: 4px 0;
+		input{
+			padding: 12px 48px 12px 20px;
+			background: #ffffff;
+			border-radius: 5px;
+			transition: background 0.24s;
+			@include mixins.mq(pc) {
+				&:hover{
+					background: darken(#ffffff,1%);
+				}
+			}
+		}
+	}
+	.serch_btn{
+		position: relative;
+		padding: 4px 0;
+		transition: transform 0.24s;
+		&::before{
+			content: '';
+			width: 15px;
+			height: 15px;
+			position: absolute;
+			left: 20px;
+			top: 50%;
+			background: url(../img/common/ico_search.png) center center /contain no-repeat;
+			transform: translate(0,-50%);
+		}
+		@include mixins.mq(pc) {
+			&:hover{
+
+			}
+		}
+		input{
+			color: #ffffff;
+			padding: 12px 20px 12px 32px;
+			background: mixins.$gradient-horizontal;
+			border-radius: 500px;
+			@include mixins.shadow;
+			transition: background 0.24s;
+			@include mixins.mq(sp) {
+				font-size: 1.5rem;
+			}
+		}
+	}
+}

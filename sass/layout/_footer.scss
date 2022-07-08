@@ -1,0 +1,308 @@
+@charset "utf-8";
+@use '../foundation/mixins';
+
+/* ============================================
+// RECRUIT
+// ==========================================*/
+.sec__recruit{
+  position: relative;
+  background: url(../img/common/recruit_bg.jpg) center center /cover no-repeat;
+  // background-attachment: fixed;
+  @media screen and (max-width: 560px){
+    background: url(../img/common/recruit_bg_sp.png) center bottom /100% auto no-repeat #e0eef5;
+  }
+  .recruit{
+    &__inner{
+      position: relative;
+      z-index: 2;
+      min-height: 530px;
+      display: flex;
+      align-items: center;
+      margin-left: 50%;
+      padding: 0 40px;
+      @include mixins.mq(sp){
+        min-height: inherit;
+        padding: 80px 0;
+      }
+      @media screen and (max-width: 560px){
+        justify-content: center;
+        margin-left: 0;
+        padding: 48px 24px 260px;
+      }
+    }
+    &__copy{
+      font-size: 4rem;
+      font-weight: bold;
+      line-height: 1.5;
+      @include mixins.mq(sp){
+        font-size: 2.7rem;
+      }
+      @media screen and (max-width: 560px){
+        text-align: center;
+      }
+    }
+    &__txt{
+      font-size: 1.6rem;
+      font-weight: bold;
+      margin-top: 24px;
+      @include mixins.mq(sp){
+        font-size: 1.4rem;
+        margin-top: 16px;
+      }
+      @media screen and (max-width: 560px){
+        text-align: center;
+      }
+    }
+    &__btn{
+      margin-top: 32px;
+      @include mixins.mq(sp){
+        margin-top: 24px;
+      }
+      @media screen and (max-width: 560px){
+        text-align: center;
+      }
+      a{
+        font-size: 1.8rem;
+        padding: 22px 80px;
+        @include mixins.mq(sp){
+          font-size: 1.6rem;
+          padding: 16px 32px;
+        }
+        &::before{
+          content: '';
+          width: 27px;
+          height: 27px;
+          margin-right: 8px;
+          background: url(../img/common/ico_recruit.png) center center /contain no-repeat;
+          @include mixins.mq(sp){
+            transform: translate(0,1px);
+          }
+        }
+      }
+    }
+  }
+}
+
+/* ============================================
+// FOOTER
+// ==========================================*/
+.footer{
+  background: #ffffff;
+  &__inner{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    @include mixins.mq(sp){
+      display: block;
+      padding-top: 48px;
+    }
+  }
+  &__body{
+    flex: 0 0 auto;
+    margin-right: 100px;
+    @include mixins.mq(sp){
+      margin-right: 0;
+      margin-top: 40px;
+    }
+  }
+  &__search{
+    flex: 1 1 auto;
+    padding-right: 80px;
+    @include mixins.mq(sp){
+      padding-right: 0;
+    }
+  }
+  &__logo{
+    a{
+      display: flex;
+      align-items: center;
+      @include mixins.mq(sp){
+        display: inline-block;
+      }
+    }
+    img{
+      @include mixins.mq(sp){
+        width: 220px;
+        height: auto;
+      }
+    }
+    span{
+      display: block;
+      text-align: center;
+      font-size: 1.2rem;
+      font-weight: bold;
+      color: mixins.$txt-color;
+      margin-left: 12px;
+      padding: 6px 10px;
+      background: mixins.$bg-color;
+      @include mixins.mq(sp){
+        font-size: 1.1rem;
+        margin-left: 0;
+        margin-top: 6px;
+        padding: 2px 8px;
+      }
+    }
+  }
+  &__address{
+    line-height: 1.86;
+    margin-top: 32px;
+    @include mixins.mq(sp){
+      font-size: 1.3rem;
+      margin-top: 24px;
+    }
+  }
+  &__links{
+    line-height: 1.86;
+    margin-top: 24px;
+    &__item{
+      display: block;
+      &:not(:first-child){
+        margin-top: 0.2em;
+      }
+      a{
+        display: flex;
+        text-decoration: underline;
+        &[target="_blank"]{
+          &::after{
+            content: '';
+            width: 14px;
+            height: 14px;
+            margin-left: 8px;
+            background: url(../img/common/ico_external.png) center center /contain no-repeat;
+            transform: translate(0,5px);
+          }
+        }
+      }
+    }
+  }
+  &__share{
+    display: flex;
+    align-items: center;
+    margin-top: 32px;
+    @include mixins.mq(sp){
+      margin-top: 28px;
+    }
+    .hd{
+      font-size: 1.4rem;
+      font-weight: bold;
+      margin-right: 14px;
+    }
+    .list{
+      display: flex;
+      &__item{
+        margin-right: 10px;
+        &:last-child{
+          margin-right: 0;
+        }
+      }
+    }
+  }
+  &__copyright{
+    font-size: 1.2rem;
+    margin-top: 40px;
+    @include mixins.mq(sp){
+      margin-top: 32px;
+    }
+  }
+  &__ga{
+    font-size: 1.2rem;
+    margin-top: 40px;
+    @include mixins.mq(sp){
+      margin-top: 28px;
+    }
+    a{
+      // color: #aaaaaa;
+      opacity: 0.6;
+      text-decoration: underline;
+    }
+  }
+  &__nav{
+    margin-bottom: 32px;
+    padding-bottom: 24px;
+    border-bottom: 1px solid mixins.$border-color;
+    @include mixins.mq(sp){
+      margin-bottom: 28px;
+    }
+    &__hd{
+      font-family: mixins.$eng;
+      font-size: 1.6rem;
+      font-weight: 900;
+      color: #b5b5b5;
+      margin-bottom: 10px;
+      @include mixins.mq(sp){
+        margin-bottom: 5px;
+      }
+    }
+    &__list{
+      display: flex;
+      flex-wrap: wrap;
+      &__item{
+        font-weight: bold;
+        margin: 0.1em 2em 0.1em 0;
+      }
+    }
+  }
+  .search__block{
+    &:not(:last-child){
+      margin-bottom: 1.2em;
+    }
+    .hd{
+      display: flex;
+      align-items: center;
+      font-weight: bold;
+      &::before{
+        content: '';
+        width: 10px;
+        height: 10px;
+        margin-right: 6px;
+        background: mixins.$primary-color;
+        border-radius: 50%;
+      }
+    }
+    .list{
+      display: flex;
+      flex-wrap: wrap;
+      &__item{
+        margin-right: 1.1em;
+        a{
+          opacity: 0.8;
+        }
+      }
+    }
+  }
+}
+
+/* ============================================
+// PAGETOP
+// ==========================================*/
+.pagetop{
+  position: fixed;
+  right: 24px;
+  bottom: 0;
+  z-index: 100;
+  opacity: 0;
+	transition: opacity 0.4s,transform 0.4s;
+  @include mixins.mq(sp){
+    right: 10px;
+  }
+  @include mixins.mq(pc){
+    transform: translate(0,5px);
+    &:hover{
+      transform: translate(0,0);
+    }
+  }
+  .js-scroll &{
+		opacity: 1;
+	}
+  a{
+    display: block;
+  }
+  img{
+    @include mixins.mq(sp){
+      width: 64px;
+      height: auto;
+    }
+  }
+}
