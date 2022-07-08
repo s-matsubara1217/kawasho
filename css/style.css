@@ -1476,10 +1476,13 @@ body input[type=search] {
 --------------------*/
 .pageHeader {
   margin-left: 80px;
+  margin-bottom: -120px;
 }
 @media screen and (max-width: 834px) {
   .pageHeader {
     margin-left: 20px;
+    margin-bottom: 0;
+    margin-bottom: -84px;
   }
 }
 .pageHeader__img {
@@ -1541,18 +1544,19 @@ body input[type=search] {
 --------------------*/
 .breadcrumb {
   padding: 0 6.8%;
-  margin-top: -80px;
   width: 60%;
   max-width: 900px;
   margin-right: 0;
   margin-left: auto;
   text-align: right;
+  margin-top: 40px;
 }
 @media screen and (max-width: 834px) {
   .breadcrumb {
-    margin-top: 0;
+    margin-top: 84px;
     width: 100%;
     text-align: left;
+    padding: 0 3.2%;
   }
 }
 .breadcrumb__list {
@@ -1586,15 +1590,6 @@ body input[type=search] {
 }
 .breadcrumb__list__item a:hover {
   opacity: 0.7;
-}
-.breadcrumb.-nonePageheader {
-  margin-top: 60px;
-}
-@media screen and (max-width: 834px) {
-  .breadcrumb.-nonePageheader {
-    margin-top: 84px;
-    padding: 0 3.2%;
-  }
 }
 
 /*--------------------
@@ -3577,7 +3572,7 @@ body .job_count_pager.contents_top .pagination ul .number.current {
   padding: 0 10px;
   background: #17b7cf;
   border: none;
-  border-radius: 500px;
+  border-radius: 5px;
 }
 @media screen and (max-width: 834px) {
   .lower-kyujin_l .job_employmenttype_list_item,
@@ -3711,7 +3706,7 @@ body .job_count_pager.contents_top .pagination ul .number.current {
   }
 }
 .lower-kyujin_d .kyujin_container {
-  margin-top: 40px;
+  margin-top: 72px;
 }
 @media screen and (max-width: 834px) {
   .lower-kyujin_d .kyujin_container {

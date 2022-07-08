@@ -11,8 +11,11 @@
 --------------------*/
 .pageHeader{
 	margin-left: 80px;
+	margin-bottom: -120px;
 	@include mixins.mq(sp) {
 		margin-left: 20px;
+		margin-bottom: 0;
+		margin-bottom: -84px;
 	}
 	&__img {
 		background-color: #ccc;
@@ -70,16 +73,17 @@
 --------------------*/
 .breadcrumb {
 	padding: 0 6.8%;
-	margin-top: -80px;
 	width: 60%;
 	max-width: 900px;
 	margin-right: 0;
 	margin-left: auto;
 	text-align: right;
+	margin-top: 40px;
 	@include mixins.mq(sp) {
-		margin-top: 0;
+		margin-top: 84px;
 		width: 100%;
 		text-align: left;
+		padding: 0 3.2%;
 	}
 
 	&__list{
@@ -112,14 +116,6 @@
 					opacity: 0.7;
 				}
 			}
-		}
-	}
-
-	&.-nonePageheader {
-		margin-top: 60px;
-		@include mixins.mq(sp) {
-			margin-top: 84px;
-			padding: 0 3.2%;
 		}
 	}
 }

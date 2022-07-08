@@ -91,7 +91,7 @@
 		padding: 0 10px;
 		background: mixins.$primary-color;
 		border: none;
-		border-radius: 500px;
+		border-radius: 5px;
 		@include mixins.mq(sp){
 			padding: 0 0.5em;
 			&::first-letter{
@@ -213,7 +213,7 @@
 	}
 	//固定ヘッダー分下に
 	.kyujin_container{
-		margin-top: 40px;
+		margin-top: 72px;
 		@include mixins.mq(sp) {
 			margin-top: 16px;
 		}
