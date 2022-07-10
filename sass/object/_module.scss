@@ -119,6 +119,16 @@
 		}
 	}
 }
+.lower-kyujin_d {
+	.breadcrumb {
+		@include mixins.mq(sp) {
+			width: calc(100% - 130px);
+			margin-top: 0;
+			margin-left: 130px;
+			font-size: 1.3rem;
+		}
+	}
+}
 
 /*--------------------
 	commonTitle
