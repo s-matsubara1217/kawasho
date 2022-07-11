@@ -1597,7 +1597,11 @@ body input[type=search] {
     width: calc(100% - 130px);
     margin-top: 0;
     margin-left: 130px;
-    font-size: 1.3rem;
+  }
+}
+@media screen and (max-width: 834px) {
+  .lower-kyujin_d .breadcrumb__list__item {
+    font-size: 1rem;
   }
 }
 
